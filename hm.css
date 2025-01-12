@@ -1,0 +1,223 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: Arial, sans-serif;/* Ganti dengan nama file gambar Anda */
+    background-color: rgb(29, 37, 37);
+    background-size: contain; /* Mengatur gambar agar menutupi seluruh elemen */
+    background-position: center; /* Memusatkan gambar */
+    background-repeat: no-repeat; /* Mencegah gambar diulang */
+    color: #212529;
+}
+
+/* Gaya untuk navbar */
+
+
+/* Gaya untuk intro */
+.Intro {
+    background-image: url('img_home/nightcompu.png'); /* Ganti dengan path gambar yang benar */
+    background-size: cover; /* Mengatur gambar agar menutupi seluruh elemen */
+    width: 100%; /* Mengatur lebar elemen menjadi 100% */
+    height: 100vh; /* Mengatur tinggi elemen menjadi 100% dari viewport */
+    background-position: center; /* Memusatkan gambar */
+    background-repeat: no-repeat; /* Mencegah gambar diulang */
+    color: white; /* Warna teks */
+    text-align: center; /* Memusatkan teks */
+    margin: 2rem 0; /* Margin atas dan bawah */
+    display: flex; /* Menggunakan flexbox untuk memusatkan konten */
+    align-items: center; /* Memusatkan konten secara vertikal */
+    justify-content: center; /* Memusatkan konten secara horizontal */
+}
+.introdev{
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+/* Gaya untuk footer */
+footer {
+    margin-top: 5%;
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(5, 58, 64, 0.8); /* Warna latar belakang footer dengan transparansi */
+    color: white;
+}
+
+/* Gaya untuk daftar game */
+.HitsHots {
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem auto; /* Margin atas dan bawah untuk memberikan jarak */
+    max-width: 1200px;
+    position: relative; /* Agar efek scroll berfungsi dengan baik */
+    z-index: 1; /* Agar daftar game berada di atas latar belakang */
+}
+
+/* Gaya untuk item game */
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Gaya untuk gambar game */
+.game-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.game-img {
+    width: 150px; /* Ukuran gambar */
+    height: auto;
+    margin: 10px;
+    transition: transform 0.2s; /* Efek saat hover */
+}
+
+.game-img:hover {
+    transform: scale(1.05); /* Membesar saat hover */
+}
+
+/* Efek scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.item figure {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0; /* Mulai dengan transparan */
+}
+
+/* Aturan untuk menampilkan efek scroll */
+.item figure {
+    animation-delay: calc(0.1s * var(--i)); /* Delay berdasarkan indeks */
+}
+
+@media only screen and (max-width: 767px) and (max-width: 476px) {
+
+    body {
+
+        background-color: rgb(29, 37, 37); /* Gambar latar belakang untuk perangkat mobile */
+
+        background-attachment: scroll; /* Mengatur agar gambar tidak tetap saat scroll */
+
+    }
+    .HitsHots {
+    padding: 24px;
+    border-radius: 10px;
+    margin: 2rem auto; /* Margin atas dan bawah untuk memberikan jarak */
+    max-width: 1200px;
+    position: relative; /* Agar efek scroll berfungsi dengan baik */
+    z-index: 1; /* Agar daftar game berada di atas latar belakang */
+}
+
+/* Gaya untuk item game */
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+    .game-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .game-img {
+        width: 100px; /* Ukuran gambar */
+        height: auto;
+        margin: 10px;
+        transition: transform 0.2s; /* Efek saat hover */
+    }
+    
+    .game-img:hover {
+        transform: scale(1.05); /* Membesar saat hover */
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+
+        background-color: rgb(29, 37, 37); /* Gambar latar belakang untuk perangkat mobile */
+
+        background-attachment: scroll; /* Mengatur agar gambar tidak tetap saat scroll */
+
+    }
+    .HitsHots {
+    padding: 3rem;
+    border-radius: 8px;
+    margin: 2rem auto; /* Margin atas dan bawah untuk memberikan jarak */
+    max-width: 1200px;
+    position: relative; /* Agar efek scroll berfungsi dengan baik */
+    z-index: 1; /* Agar daftar game berada di atas latar belakang */
+}
+
+/* Gaya untuk item game */
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+    .game-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .game-img {
+        width: 100px; /* Ukuran gambar */
+        height: auto;
+        margin: 10px;
+        transition: transform 0.2s; /* Efek saat hover */
+    }
+    
+    .game-img:hover {
+        transform: scale(1.05); /* Membesar saat hover */
+    }
+
+}
+
+
+/* Media query untuk perangkat desktop */
+
+@media only screen and (min-width: 1025px) {
+
+    body {
+
+        background-color: rgb(29, 37, 37); /* Gambar latar belakang untuk desktop */
+
+    }
+
+} 
+
+/* Untuk mengatur indeks */
+.item figure:nth-child(1) { --i: 1; }
+.item figure:nth-child(2) { --i: 2; }
+.item figure:nth-child(3) { --i: 3; }
+.item figure:nth-child(4) { --i: 4; }
+.item figure:nth-child(5) { --i: 5; }
+.item figure:nth-child(6) { --i: 6; }
+.item figure:nth-child(7) { --i: 7; }
+.item figure:nth-child(8) { --i: 8; }
+.item figure:nth-child(9) { --i: 9; }
+.item figure:nth-child(10) { --i: 10; }
+.item figure:nth-child(11) { --i: 11; }
+.item figure:nth-child(12) { --i: 12; }

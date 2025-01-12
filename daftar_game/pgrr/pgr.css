@@ -1,0 +1,262 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: Arial, sans-serif;/* Ganti dengan nama file gambar Anda */
+    background-color: rgb(29, 37, 37);
+    background-size: contain; /* Mengatur gambar agar menutupi seluruh elemen */
+    background-position: center; /* Memusatkan gambar */
+    background-repeat: no-repeat; /* Mencegah gambar diulang */
+    color: #212529;
+}
+
+.intro {
+    position: relative;
+    width: 100%;
+    height: 125vh; /* Tinggi elemen intro */
+    overflow: hidden;
+    display: contain;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.intro h1{
+    position: contain;
+    margin-top: 300px;
+}
+
+.intro video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto; /* Mengatur lebar video secara otomatis */
+    height: 80%; /* Mengatur tinggi video secara otomatis */
+    z-index: -1; /* Menempatkan video di belakang konten */
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+/* Gaya untuk footer */
+footer {
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(5, 58, 64, 0.8); /* Warna latar belakang footer dengan transparansi */
+    color: white;
+}
+
+.content{
+    padding: 2rem;
+
+            background-color: rgba(0, 0, 0, 0.7);
+
+            color: white;
+            border-radius: 16px;
+
+            text-align: left;
+
+            display: none; /* Sembunyikan konten secara default */
+}
+
+.active {
+
+    display: block; /* Tampilkan konten yang aktif */
+
+}   
+
+.text-center {
+    margin: 20px 0;
+}
+
+.custom-button {
+    background-color: #f7ca06; /* Warna latar belakang */
+    color: #000000; /* Warna teks */
+    border: none; /* Tanpa border */
+    border-radius: 10px; /* Sudut membulat */
+    padding: 10px 20px; /* Padding atas-bawah dan kiri-kanan */
+    font-size: 15px; /* Ukuran font */
+    cursor: pointer; /* Kursor berubah saat hover */
+    transition: background-color 0,1s, transform 1s; /* Transisi halus */
+    margin: 0 2px; /* Margin antar tombol */
+}
+
+.custom-button:hover {
+    background-color: #f7cb0638; /* Warna latar belakang saat hover */
+    transform: scale(0.90); /* Efek zoom saat hover */
+}
+
+.custom-button:active {
+    transform: scale(0.95); /* Efek zoom saat tombol ditekan */
+}
+
+
+
+/* Efek scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.item figure {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0; /* Mulai dengan transparan */
+}
+
+/* Aturan untuk menampilkan efek scroll */
+.item figure {
+    animation-delay: calc(0.1s * var(--i)); /* Delay berdasarkan indeks */
+}
+
+
+
+@media only screen and (max-width: 767px) and (max-width: 476px) {
+
+    body {
+
+        background-color: rgb(29, 37, 37); /* Gambar latar belakang untuk perangkat mobile */
+
+        background-attachment: scroll; /* Mengatur agar gambar tidak tetap saat scroll */
+
+    }
+
+    .intro {
+        position: relative;
+        width: 100%;
+        height: 34vh; /* Tinggi elemen intro */
+        overflow: hidden;
+        display: contain;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    .intro h1{
+        position: contain;
+        margin-top: 185px;
+        font-size: 130%;
+    }
+    
+    .intro video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto; /* Mengatur lebar video secara otomatis */
+        height: 80%; /* Mengatur tinggi video secara otomatis */
+        z-index: -1; /* Menempatkan video di belakang konten */
+        transform: translate(-50%, -50%);
+        display: flex;
+    }
+
+    .intro h1{
+        position: contain;
+        margin-top: 130px;
+    }
+
+    .custom-button {
+        background-color: #f7ca06; /* Warna latar belakang */
+        color: #000000; /* Warna teks */
+        border: none; /* Tanpa border */
+        border-radius: 10px; /* Sudut membulat */
+        padding: 10px 20px; /* Padding atas-bawah dan kiri-kanan */
+        font-size: 10px; /* Ukuran font */
+        cursor: pointer; /* Kursor berubah saat hover */
+        transition: background-color 10s, transform 5s; /* Transisi halus */
+        margin: 0 2px; /* Margin antar tombol */
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+
+        background-color: rgb(29, 37, 37); /* Gambar latar belakang untuk perangkat mobile */
+
+        background-attachment: scroll; /* Mengatur agar gambar tidak tetap saat scroll */
+    
+    }
+
+
+.intro {
+        position: relative;
+        width: 100%;
+        height: 48vh; /* Tinggi elemen intro */
+        overflow: hidden;
+        display: contain;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    .intro h1{
+        position: contain;
+        margin-top: 185px;
+        font-size: 130%;
+    }
+    
+    .intro video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto; /* Mengatur lebar video secara otomatis */
+        height: 80%; /* Mengatur tinggi video secara otomatis */
+        z-index: -1; /* Menempatkan video di belakang konten */
+        transform: translate(-50%, -50%);
+        display: flex;
+    }
+
+    .intro h1{
+        position: contain;
+        margin-top: 130px;
+    }
+
+    .custom-button {
+        background-color: #f7ca06; /* Warna latar belakang */
+        color: #000000; /* Warna teks */
+        border: none; /* Tanpa border */
+        border-radius: 10px; /* Sudut membulat */
+        padding: 10px 20px; /* Padding atas-bawah dan kiri-kanan */
+        font-size: 10px; /* Ukuran font */
+        cursor: pointer; /* Kursor berubah saat hover */
+        transition: background-color 10s, transform 5s; /* Transisi halus */
+        margin: 0 2px; /* Margin antar tombol */
+    }
+    
+   
+
+}
+
+
+/* Media query untuk perangkat desktop */
+
+@media only screen and (min-width: 1025px) {
+
+    body {
+
+        background-color: rgb(29, 37, 37); /* Gambar latar belakang untuk desktop */
+
+    }
+
+} 
+
